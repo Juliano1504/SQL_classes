@@ -64,7 +64,83 @@ INSERT INTO pessoas(id, nome, idade, endereco_id) VALUES (14, 'Beatriz Silva', 2
 
 INSERT INTO pessoas(id, nome, idade, endereco_id) VALUES (15, 'Alexandre Pereira', 37, 15);
 
-
 select * from pessoas p
 inner join enderecos e
 on p.endereco_id = e.id;
+
+1- select nome, idade from pessoas 
+
+2- select cidade from enderecos
+
+3- Select count(nome) from pessoas
+
+4- Select * from pessoas where idade >30
+
+5- select p.nome, e.cidade 
+from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id; 
+
+6- select * from pessoas order by nome
+
+7- select p.nome, e.cidade 
+from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+where p.idade between 25 and 35;
+
+8- select e.cidade, count(p.nome) from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+group by e.cidade
+
+9-  select e.cidade, count(p.nome) from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+group by e.cidade
+fetch first 5 rows only;
+
+10-  select p.nome, e.cidade , e.rua
+from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+
+11- Select p.nome from pessoas p
+where p.idade in (select max(p.idade) from pessoa p)
+
+12- select * from pessoas p
+left join enderecos e
+on p.endereco_id = e.id
+where e.id like '%null%';
+
+13- select * from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+where cidade = '%null%';
+
+14- select e.cidade, count(p.nome) 
+from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+where cidade like 'C%'
+group by e.cidade 
+
+15- select p.nome from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+where e.cidade not like 'Cidade Primavera'
+
+16- select * from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+order by cidade;
+
+17- select * from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+where rua like '%Rua dos Girassóis%'
+
+18- select nome, cidade from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id;
+
