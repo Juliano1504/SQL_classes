@@ -1,0 +1,21 @@
+1- select * from pessoas
+
+2- select nome from pessoas order by nome
+
+3- Select count(nome) from pessoas where idade >25
+
+4- select avg(idade) from pessoas
+
+5- 
+
+6- select count(*) from enderecos 
+
+7- select count(*) from enderecos where cidade in (select cidade from enderecos e group by cidade having count(cidade) = 1)
+
+8- select distinct idade from pessoas
+
+9- select min(idade), max(idade) from pessoas
+
+10- Select nome, idade from pessoas  
+
+11-
