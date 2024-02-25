@@ -1,0 +1,19 @@
+1- select nome from pessoas
+union all
+select cidade from enderecos
+
+2- select nome from pessoas
+union
+select cidade from enderecos
+
+3- Select nome from pessoas
+intersect
+select cidade from enderecos
+
+4- select nome from pessoas
+minus
+select cidade from enderecos
+
+5- select nome from pessoa
+union
+select cidade from enderecos
