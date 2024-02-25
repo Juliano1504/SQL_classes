@@ -12,10 +12,23 @@
 
 7- select count(*) from enderecos where cidade in (select cidade from enderecos e group by cidade having count(cidade) = 1)
 
-8- select distinct idade from pessoas
+8- select idade from pessoas group by idade having count(idade) = 1
 
 9- select min(idade), max(idade) from pessoas
 
-10- Select nome, idade from pessoas  
+10- Select nome, nvl(idade, 0) from pessoas  
 
-11-
+11- select e.cidade, avg(nvl(idade, 0)) from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+group by e.cidade
+
+12- select e.rua, avg(nvl(idade, 0)) from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+group by e.rua
+
+13- select e.cidade, max(nvl(idade, 0)) from pessoas p
+inner join enderecos e
+on p.endereco_id = e.id
+group by e.cidade
