@@ -6,11 +6,13 @@
 
 4- select avg(idade) from pessoas
 
-5- 
+5- select nome, idade from pessoas
+where idade = (select max(idade) from pessoas)
 
 6- select count(*) from enderecos 
 
-7- select count(*) from enderecos where cidade in (select cidade from enderecos e group by cidade having count(cidade) = 1)
+7-  select count(*) from enderecos
+where cidade in(select cidade from enderecos group by cidade having count(cidade) = 1)
 
 8- select idade from pessoas group by idade having count(idade) = 1
 
