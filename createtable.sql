@@ -66,5 +66,5 @@ Telefone varchar(20)
 Id number primary key,
 Data date,
 Fornecedor_CNPJ varchar2(20),
-foreign key (Fornecedor_id) references Fornecedores (id)
+foreign key (Fornecedor_cnpj) references Fornecedores (cnpj)
 );
