@@ -32,7 +32,7 @@ Id number primary key,
 Nome varchar2(50)
 );
 
-2.2 - Create table Funcionários (
+2.2 - Create table Funcionarios (
 Id number primary key,
 Nome varchar(50),
 Cargo varchar(50),
