@@ -65,6 +65,6 @@ Telefone varchar(20)
 3.3 - Create table Pedidos_Fornecedores (
 Id number primary key,
 Data date,
-Fornecedor_CNPJ int,
+Fornecedor_CNPJ varchar2(20),
 foreign key (Fornecedor_id) references Fornecedores (id)
 );
