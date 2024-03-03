@@ -14,15 +14,15 @@ Preço number (10,2)
 3- Create table Pedidos (
 id number primary key,
 Data date,
-Clientes_id int,
+Clientes_id number,
 foreign key(Clientes_id) references Clientes(id)
 );
 
 4- Create table Itens_Pedido (
 id number primary key,
-Pedido_id int,
-Produto_id int,
-Quantidade int,
+Pedido_id number,
+Produto_id number,
+Quantidade number,
 foreign key(Pedido_id) references Pedidos(id),
 foreign key(Produto_id) references Produtos(Código)
 );
