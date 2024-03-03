@@ -8,7 +8,7 @@ Email varchar2(100)
 2- create table Produtos (
 Código number primary key,
 Nome varchar2(100),
-Preço number
+Preço number (10,2)
 );
 
 3- Create table Pedidos (
