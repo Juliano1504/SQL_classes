@@ -36,7 +36,7 @@ Nome varchar2(50)
 Id number primary key,
 Nome varchar(50),
 Cargo varchar(50),
-Salário Number(19,4),
+Salário Number(10,2),
 Departamento_id int,
 foreign key(Departamento_id) references Departamentos(id)
 );
